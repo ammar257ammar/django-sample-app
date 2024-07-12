@@ -6,16 +6,16 @@ from django.urls import reverse
 class protein(models.Model):
 
     # Fields
-    protein_name = models.CharField("protein_name", max_length=255)
-    uniprot_id = models.CharField("uniprot_id", max_length=20)
-    experimental_method = models.CharField("experimental_method", max_length=255)
-    pdb_resolution = models.FloatField("pdb_resolution")
-    deposit_date = models.DateTimeField("deposit_date", auto_now=True, editable=False)
-    revision_date = models.DateTimeField("revision_date", auto_now_add=True, editable=False)
-    number_of_chains = models.IntegerField("number_of_chains")
-    sequence_length = models.IntegerField("sequence_length")
-    molecular_weight = models.FloatField("molecular_weight")
-    atom_count = models.IntegerField("atom_count")
+    protein_name = models.CharField("Protein Name", max_length=255)
+    uniprot_id = models.CharField("Uniprot ID", max_length=20)
+    experimental_method = models.CharField("Experimental Method", max_length=255)
+    pdb_resolution = models.FloatField("PDB Resolution")
+    deposit_date = models.DateTimeField("Deposit Date", auto_now=True, editable=False)
+    revision_date = models.DateTimeField("Revision Date", auto_now_add=True, editable=False)
+    number_of_chains = models.IntegerField("Number Of Chains")
+    sequence_length = models.IntegerField("Sequence Length")
+    molecular_weight = models.FloatField("Molecular Weight")
+    atom_count = models.IntegerField("Atom Count")
 
     class Meta:
         pass
