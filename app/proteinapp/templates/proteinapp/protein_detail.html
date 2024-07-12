@@ -1,0 +1,32 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<div>
+    <a class="btn btn-primary"
+      href="{% url 'proteinapp_protein_list' %}">
+    Go Back to Protein Listing
+    </a>
+</div>
+
+<br>
+
+<h2>Protein Details</h2>
+
+<br>
+<table class="table">
+    <tr><td>Protein Name</td><td>{{ object.protein_name }}</td></tr>
+    <tr><td>Uniprot ID</td><td>{{ object.uniprot_id }}</td></tr>
+    <tr><td>Experimental Method</td><td>{{ object.experimental_method }}</td></tr>
+    <tr><td>PDB Resolution</td><td>{{ object.pdb_resolution }}</td></tr>
+    <tr><td>Deposit Date</td><td>{{ object.deposit_date }}</td></tr>
+    <tr><td>Revision Date</td><td>{{ object.revision_date }}</td></tr>
+    <tr><td>Number of chains</td><td>{{ object.number_of_chains }}</td></tr>
+    <tr><td>Sequence Length</td><td>{{ object.sequence_length }}</td></tr>
+    <tr><td>Molecular Weight</td><td>{{ object.molecular_weight }}</td></tr>
+    <tr><td>Atom Count</td><td>{{ object.atom_count }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}

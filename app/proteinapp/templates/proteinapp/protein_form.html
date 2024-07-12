@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<div>
+  <a class="btn btn-primary"
+    href="{% url 'proteinapp_protein_list' %}">
+  Go Back to Protein Listing
+  </a>
+</div>
+  
+<br>
+
+<div class="row">
+
+  <div class="col-md-12">
+
+    <h1>Update Protein Details</h1>
+
+    <br>
+
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      {{ form.errors }}
+
+      {{ form.as_p }}  
+
+      <input type="submit" value="Save" class="btn btn-primary">
+    </form>
+  </div>
+
+</div>
+
+
+{% endblock %}

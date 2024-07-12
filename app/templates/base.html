@@ -1,0 +1,39 @@
+{% load static %}
+<html>
+  <head>
+    <title>Protein Bind</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <style>
+
+        #id_protein_name{
+            width: 500px;
+        }
+
+    </style>
+    
+    {% block extrahead %}{% endblock %}
+
+  </head>
+  <body>
+    {% block allcontent %}
+    <div id="content" class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <h2 class="mt-4 mb-4">Home: <a href="{% url 'index' %}">proteinbind</a></h2>
+
+                <div class="card">
+                    <div class="card-body">
+                    
+                    <p class="card-text">{% block content %}{% endblock %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>
