@@ -4,4 +4,4 @@ from . import models
 class ProteinForm(forms.ModelForm):
     class Meta:
         model = models.protein
-        fields = []
+        fields = "__all__"

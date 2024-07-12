@@ -22,8 +22,8 @@ class ProteinDetailView(generic.DetailView):
 
 class ProteinUpdateView(generic.UpdateView):
     model = models.protein
-    #form_class = forms.ProteinForm
-    fields=["protein_name"]
+    form_class = forms.ProteinForm
+    #fields=["protein_name"]
     pk_url_kwarg = "pk"
 
 
